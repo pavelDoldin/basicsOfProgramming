@@ -7,7 +7,21 @@ import java.util.Scanner;
 public class App {
     public static void main( String[] args ) {
         //System.out.println( "Hello World!" );
-        ex4();
+        ex5();
+    }
+    public static void ex5(){
+        /**
+         * Получить остатки от деления на 13, 14, 15, 16, 17, 19 числа 4199. Затем вычислить сумму остатков от деления.
+         */
+        final int number = 4199;
+        double result1 = number % 13;
+        double result2 = number % 14;
+        double result3 = number % 15;
+        double result4 = number % 16;
+        double result5 = number % 17;
+        double result6 = number % 19;
+        double result = result1 + result2 + result3 + result4 + result5 + result6;
+        System.out.println(result);
     }
     public static void ex4(){
         /**
