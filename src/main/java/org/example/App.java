@@ -1,12 +1,39 @@
 package org.example;
 
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class App {
     public static void main( String[] args ) {
         //System.out.println( "Hello World!" );
-        ex3();
+        ex4();
+    }
+    public static void ex4(){
+        /**
+         * С помощью new Random().nextInt(1, 10) сгенерируйте 2 разных числа grade1, grade2. Обратите внимание,
+         * что класс Random вообще призван, чтобы всегда генерировать случайное число. Тут мы указали конкретный
+         * диапазон, потому что работу можно оценить от 1 до 10. Но можно диапазон и не указывать. Каждый раз,
+         * когда мы будем вызывать этот метод, будет генерироваться новое число.
+         * Теперь давайте проверим, что оба числа больше 5 — это приемлемая для сдачи работы оценка.
+         * Используем операции сравнения и &&, чтобы выполнить две проверки на одной строчке.
+         * Результат выполнения записываем в переменную типа boolean c названием result.
+         * Затем выводим result на экран. Так, если оба числа были больше 5, в результате мы должны получить true.
+         * Чтобы проверить, какими были числа, можно перед операцией сравнения тоже вывести их на экран.
+         * Затем посчитаем средний балл: сложим две оценки и разделим на два. Подумайте,
+         * какой тип данных может получиться в итоге? Результат также вывести на экран.
+         */
+        Random random = new Random();
+        int grade1 = random.nextInt(10);
+        int grade2 = random.nextInt(10);
+        int number = 5;
+        boolean result = grade1 > number && grade2 > number;
+        double average = (double) (grade1 + grade2) / 2;
+        System.out.println(grade1);
+        System.out.println(grade2);
+        System.out.println(result);
+        System.out.println(average);
+
     }
     public static void ex3(){
         /**
