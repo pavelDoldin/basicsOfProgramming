@@ -7,7 +7,38 @@ import java.util.Scanner;
 public class App {
     public static void main( String[] args ) {
         //System.out.println( "Hello World!" );
-        ex5();
+        ex6();
+    }
+    public static void ex6(){
+        /**
+         * Первое задание
+         * Создайте, строку из 5 случайных чисел new Random().nextInt().
+         * Замените все единицы на символ ‘i’.
+         * У получившейся строки уберите все символы ‘-’
+         * У получившейся строки замените все нули на символ ‘o’.
+         * У получившейся строки замените все шестерки на символ ‘b’.
+         * Выведите результат в консоль.
+         * Узнайте, содержится ли подстрока “23” у получившейся строки.
+         * Узнайте индекс подстроки “ob”.
+         */
+        Random random = new Random();
+        int number1 = random.nextInt();
+        int number2 = random.nextInt();
+        int number3 = random.nextInt();
+        int number4 = random.nextInt();
+        int number5 = random.nextInt();
+
+        String fromNumberToString = String.valueOf(number1) + String.valueOf(number2) + String.valueOf(number3) +
+                String.valueOf(number4) + String.valueOf(number5);
+        System.out.println(fromNumberToString);
+        String i = fromNumberToString.replaceAll("1", "i");
+        String del = i.replaceAll("-", "");
+        String o =del.replaceAll("0", "o");
+        String b = o.replaceAll("6", "b");
+        System.out.println(b);
+        System.out.println(b.contains("23"));
+        System.out.println(b.indexOf("ob"));
+
     }
     public static void ex5(){
         /**
