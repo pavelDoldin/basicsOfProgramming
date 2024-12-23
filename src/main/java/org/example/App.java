@@ -7,7 +7,44 @@ import java.util.Scanner;
 public class App {
     public static void main( String[] args ) {
         //System.out.println( "Hello World!" );
-        ex6();
+        castSpell();
+    }
+    public static void castSpell(){
+        /**
+         * Теперь работаем внутри метода castSpell().
+         * 1. Создайте строку в верхнем регистре: ARDENTIS VERUM LUMINOS ET FULGUR SYLVESTRA ELIXIA.
+         * 2. Приведите строку к нижнему регистру.
+         * 3. Создайте случайное число int start с помощью класса Random. Число должно быть в диапазоне от 0 до 50.
+         * 4. Создайте подстроку от строки, содержащей слова заклинаний, которая будет начинаться с индекса, равного start.
+         * 5. Создайте объект класса StringBuilder spell, запишите полученную строку выше в этот объект.
+         * 6. Разверните строку задом наперед.
+         * 7. В полученной строке поменяйте местами символы под 0 и 1 индексами. * (обратитесь к методу replace:
+         * сначала получите символы(одна буква или символ пробела) под этими индексами с помощью метода charAt,
+         * а затем используйте их для замены). Должно получиться что-то такое:
+         * builder.replace(0, 1, String.valueOf(one));
+         * builder.replace(1,2, String.valueOf(zero));
+         * 8. Полученную строку выведите на экран. Запускаем метод main.
+         * Прочитайте заклинание! Попробуйте запустить несколько раз и посмотрите,
+         * как меняется ваше заклинание. Подумайте, почему?
+         */
+
+        Random random = new Random();
+        int numberRandom = random.nextInt(50);
+        //System.out.println(numberRandom);
+        String str = "ARDENTIS VERUM LUMINOS ET FULGUR SYLVESTRA ELIXIA.";
+        String str1 = str.toLowerCase();
+        System.out.println(str1);
+        String str2 = str1.substring(numberRandom);
+        //System.out.println(str2);
+        StringBuilder spell = new StringBuilder(str2);
+        //System.out.println(spell.reverse());
+        String strZero = String.valueOf(spell.charAt(0));
+        String strOne = String.valueOf(spell.charAt(1));
+        spell.replace(0,1, strOne);
+        spell.replace(1, 2, strZero);
+        System.out.println(spell);
+
+
     }
     public static void ex6(){
         /**
