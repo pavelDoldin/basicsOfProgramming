@@ -7,7 +7,39 @@ import java.util.Scanner;
 public class App {
     public static void main( String[] args ) {
         //System.out.println( "Hello World!" );
-        castSpell();
+        ex7();
+    }
+    public static void ex7(){
+        /**
+         * Сгенерируйте 2 случайных целых числа.
+         * Если оба числа чётные, разделите каждое число на 2 и выведите в консоль сумму.
+         * Иначе если только первое число делится на 2, разделите только первое число на 2 и выведите в консоль
+         * сумму полученного числа и второго числа.
+         * Иначе, если только второе число делится на 2, разделите только второе число на 2 и выведите результат
+         * вычисления в консоль.
+         * Иначе (если никакое число не делится на 2) просто выведите в консоль сумму этих чисел.
+         */
+        Random random = new Random();
+        double sum = 0;
+        double firstNumber = random.nextDouble();
+        double secondNumber = random.nextDouble();
+        System.out.println(firstNumber + " " + secondNumber);
+        if (firstNumber % 2 == 0 && secondNumber % 2 == 0) {
+            firstNumber = firstNumber / 2;
+            secondNumber = secondNumber / 2;
+            sum = firstNumber + secondNumber;
+            System.out.println(sum);
+        } else if (firstNumber % 2 == 0 && secondNumber % 2 == 1) {
+            firstNumber = firstNumber / 2;
+            sum = firstNumber + secondNumber;
+            System.out.println(sum);
+        } else if (firstNumber % 2 == 1 && secondNumber % 2 == 0) {
+            secondNumber /= 2;
+            System.out.println(secondNumber);
+        } else {
+            sum = firstNumber + secondNumber;
+            System.out.println(sum);
+        }
     }
     public static void castSpell(){
         /**
