@@ -7,8 +7,11 @@ import java.util.Scanner;
 public class App {
     public static void main( String[] args ) {
         //System.out.println( "Hello World!" );
-        ex7();
+        Quidditch quidditch = new Quidditch();
+        quidditch.getBalls();
+        quidditch.playGame();
     }
+
     public static void ex7(){
         /**
          * Сгенерируйте 2 случайных целых числа.
@@ -20,7 +23,7 @@ public class App {
          * Иначе (если никакое число не делится на 2) просто выведите в консоль сумму этих чисел.
          */
         Random random = new Random();
-        double sum = 0;
+        double sum;
         double firstNumber = random.nextDouble();
         double secondNumber = random.nextDouble();
         System.out.println(firstNumber + " " + secondNumber);
