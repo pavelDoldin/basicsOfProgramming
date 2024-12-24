@@ -7,11 +7,24 @@ import java.util.Scanner;
 public class App {
     public static void main( String[] args ) {
         //System.out.println( "Hello World!" );
-        Quidditch quidditch = new Quidditch();
-        quidditch.getBalls();
-        quidditch.playGame();
-    }
+        //Quidditch quidditch = new Quidditch();
+        //quidditch.getBalls();
+        //quidditch.playGame();
 
+    }
+    public static void ex8(){
+        /**
+         * Используя цикл, вычислите сумму всех чётных чисел от 222 до 444 включительно.
+         * Результат выведите в консоль. В консоли должно появиться одно число, которое является суммой.
+         */
+        int sumOfEvenNumbers = 0;
+        for (int i = 222; i <= 444; i++) {
+            if (i % 2 == 0){
+                sumOfEvenNumbers = sumOfEvenNumbers + i;
+            }
+        }
+        System.out.println(sumOfEvenNumbers);
+    }
     public static void ex7(){
         /**
          * Сгенерируйте 2 случайных целых числа.
