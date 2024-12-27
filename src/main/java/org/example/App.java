@@ -1,6 +1,7 @@
 package org.example;
 
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -10,7 +11,35 @@ public class App {
         //Quidditch quidditch = new Quidditch();
         //quidditch.getBalls();
         //quidditch.playGame();
+        ex9();
 
+    }
+    public static void ex9(){
+        /**
+         *  Вам дан рецепт зелья, и пустой массив, который представляет собой котел.
+         *  Вам нужно сложить в пустой массив все нужные ингредиенты с помощью обращения к ячейке массива
+         *  по индексу и присваивания ей какого-то значения, а затем сравнить два массива с помощью метода
+         *  класса Arrays, чтобы проверить, что зелья сварено правильно.
+         * Порядок добавления: Капля сока вампирской розы,
+         * Слеза феникса, Засушенная чешуя василиска, Частичка души лесной феи,
+         * Яд шершавого ядозуба, Осколок кометы
+         */
+        String[] recipe = {"Засушенная чешуя василиска",
+                "Частичка души лесной феи",
+                "Капля сока вампирской розы",
+                "Яд шершавого ядозуба",
+                "Осколок кометы",
+                "Слеза феникса"};
+        String[] potion = new String[6];
+        potion[0] = recipe[2];
+        potion[1] = recipe[5];
+        potion[2] = recipe[0];
+        potion[3] = recipe[1];
+        potion[4] = recipe[3];
+        potion[5] = recipe[4];
+        Arrays.sort(recipe);
+        Arrays.sort(potion);
+        System.out.println(Arrays.equals(recipe, potion));
     }
     public static void ex8(){
         /**
