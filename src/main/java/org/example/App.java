@@ -11,6 +11,8 @@ public class App {
         //Quidditch quidditch = new Quidditch();
         //quidditch.getBalls();
         //quidditch.playGame();
+//        Point point = new Point();
+//        point.prepare();
         ex9();
 
     }
