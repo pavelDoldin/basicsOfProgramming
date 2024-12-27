@@ -13,8 +13,26 @@ public class App {
         //quidditch.playGame();
 //        Point point = new Point();
 //        point.prepare();
-        ex9();
+        ex10();
 
+    }
+    public static void ex10(){
+        /**
+         * Создайте массив из 5 целых чисел. Напишите код для нахождения наименьшего и наибольшего элемента в массиве.
+         * Выведите эти элементы в консоль.
+         */
+        int[] numbers = {10, 8, 9, 6, 0};
+        int min = numbers[0];
+        int max = numbers[1];
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] < min){
+                min = numbers[i];
+            }
+            if (numbers[i] > max){
+                max = numbers[i];
+            }
+        }
+        System.out.println("Min = " + min + "\nMax = " + max);
     }
     public static void ex9(){
         /**
