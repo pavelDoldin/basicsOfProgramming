@@ -11,9 +11,28 @@ public class App {
         //Quidditch quidditch = new Quidditch();
         //quidditch.getBalls();
         //quidditch.playGame();
+
 //        Point point = new Point();
 //        point.prepare();
-        ex11();
+//        ex11();
+
+//    Dragon dragon = new Dragon();
+//        dragon.name = "Dr";
+//        dragon.age = 100;
+//        dragon.color = "bleak";
+//        System.out.println("Имя: " + dragon.name);
+//        System.out.println("Возраст: " + dragon.age);
+//        System.out.println("Цвет: " + dragon.color);
+//        System.out.println("Может дышать огнём: " + dragon.isFireBreathing);
+//
+//    System.out.println("----------------------------------------------");
+//    Dragon redDragon = new Dragon("Flame", 150, "red", true);
+//        System.out.println("Имя: " + redDragon.name);
+//        System.out.println("Возраст: " + redDragon.age);
+//        System.out.println("Цвет: " + redDragon.color);
+//        System.out.println("Может дышать огнём: " + redDragon.isFireBreathing);
+//        redDragon.roar();
+
 
     }
 
