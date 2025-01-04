@@ -6,17 +6,47 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class App {
-    public static void main( String[] args ) {
+    public static void main(String[] args) {
         //System.out.println( "Hello World!" );
         //Quidditch quidditch = new Quidditch();
         //quidditch.getBalls();
         //quidditch.playGame();
 //        Point point = new Point();
 //        point.prepare();
-        ex10();
+        ex11();
 
     }
-    public static void ex10(){
+
+    public static void ex11() {
+        /**
+         * В этой задаче, мы проверим, есть ли у пользователя все необходимые для зелья ингредиенты, и
+         * если да, сообщим ему, что он может приступать к приготовлению, иначе, сообщить, что ингредиентов недостаточно.
+         * "Драконий коготь, Лист мандрагоры, Корень шершавой астрелии."
+         */
+        Scanner scanner = new Scanner(System.in);
+        String ingredientList = "Драконий коготь, Лист мандрагоры, Корень шершавой астрелии";
+        String[] copyIngredientList = ingredientList.split(", ");
+
+        String inputScannerIngredient = scanner.nextLine();
+        String[] introducedIngredients = inputScannerIngredient.split(", ");
+
+        int count = 0;
+        for (int i = 0; i < copyIngredientList.length; i++) {
+            for (int j = 0; j < introducedIngredients.length; j++) {
+
+                if (copyIngredientList[i].equals(introducedIngredients[j])) {
+                    count++;
+                }
+            }
+        }
+        if (count == copyIngredientList.length){
+            System.out.println("У вас есть все необходимые ингредиенты для зелья! Можете начинать создание.");
+        } else {
+            System.out.println("У вас нехватает ингредиентов.");
+        }
+    }
+
+    public static void ex10() {
         /**
          * Создайте массив из 5 целых чисел. Напишите код для нахождения наименьшего и наибольшего элемента в массиве.
          * Выведите эти элементы в консоль.
@@ -25,16 +55,17 @@ public class App {
         int min = numbers[0];
         int max = numbers[1];
         for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] < min){
+            if (numbers[i] < min) {
                 min = numbers[i];
             }
-            if (numbers[i] > max){
+            if (numbers[i] > max) {
                 max = numbers[i];
             }
         }
         System.out.println("Min = " + min + "\nMax = " + max);
     }
-    public static void ex9(){
+
+    public static void ex9() {
         /**
          *  Вам дан рецепт зелья, и пустой массив, который представляет собой котел.
          *  Вам нужно сложить в пустой массив все нужные ингредиенты с помощью обращения к ячейке массива
@@ -61,20 +92,22 @@ public class App {
         Arrays.sort(potion);
         System.out.println(Arrays.equals(recipe, potion));
     }
-    public static void ex8(){
+
+    public static void ex8() {
         /**
          * Используя цикл, вычислите сумму всех чётных чисел от 222 до 444 включительно.
          * Результат выведите в консоль. В консоли должно появиться одно число, которое является суммой.
          */
         int sumOfEvenNumbers = 0;
         for (int i = 222; i <= 444; i++) {
-            if (i % 2 == 0){
+            if (i % 2 == 0) {
                 sumOfEvenNumbers = sumOfEvenNumbers + i;
             }
         }
         System.out.println(sumOfEvenNumbers);
     }
-    public static void ex7(){
+
+    public static void ex7() {
         /**
          * Сгенерируйте 2 случайных целых числа.
          * Если оба числа чётные, разделите каждое число на 2 и выведите в консоль сумму.
@@ -106,7 +139,8 @@ public class App {
             System.out.println(sum);
         }
     }
-    public static void castSpell(){
+
+    public static void castSpell() {
         /**
          * Теперь работаем внутри метода castSpell().
          * 1. Создайте строку в верхнем регистре: ARDENTIS VERUM LUMINOS ET FULGUR SYLVESTRA ELIXIA.
@@ -137,13 +171,14 @@ public class App {
         //System.out.println(spell.reverse());
         String strZero = String.valueOf(spell.charAt(0));
         String strOne = String.valueOf(spell.charAt(1));
-        spell.replace(0,1, strOne);
+        spell.replace(0, 1, strOne);
         spell.replace(1, 2, strZero);
         System.out.println(spell);
 
 
     }
-    public static void ex6(){
+
+    public static void ex6() {
         /**
          * Первое задание
          * Создайте, строку из 5 случайных чисел new Random().nextInt().
@@ -167,14 +202,15 @@ public class App {
         System.out.println(fromNumberToString);
         String i = fromNumberToString.replaceAll("1", "i");
         String del = i.replaceAll("-", "");
-        String o =del.replaceAll("0", "o");
+        String o = del.replaceAll("0", "o");
         String b = o.replaceAll("6", "b");
         System.out.println(b);
         System.out.println(b.contains("23"));
         System.out.println(b.indexOf("ob"));
 
     }
-    public static void ex5(){
+
+    public static void ex5() {
         /**
          * Получить остатки от деления на 13, 14, 15, 16, 17, 19 числа 4199. Затем вычислить сумму остатков от деления.
          */
@@ -188,7 +224,8 @@ public class App {
         double result = result1 + result2 + result3 + result4 + result5 + result6;
         System.out.println(result);
     }
-    public static void ex4(){
+
+    public static void ex4() {
         /**
          * С помощью new Random().nextInt(1, 10) сгенерируйте 2 разных числа grade1, grade2. Обратите внимание,
          * что класс Random вообще призван, чтобы всегда генерировать случайное число. Тут мы указали конкретный
@@ -214,7 +251,8 @@ public class App {
         System.out.println(average);
 
     }
-    public static void ex3(){
+
+    public static void ex3() {
         /**
          *  Создайте 5 переменных типа String: dumbledore, mcgonagall, snape, lupin, hugrid.
          *  Присвойте каждой переменной значение, соответствующее ее названию. Должны получиться поля,
@@ -239,7 +277,8 @@ public class App {
         System.out.println(hugrid);
 
     }
-    public static void ex2(){
+
+    public static void ex2() {
         /*
          * Напишите программу, которая проверяет.
          * Счастливый билет или нет и выводила результат.
@@ -260,13 +299,14 @@ public class App {
 
         int sumTheFirstThreeDigits = secondNumber + firstDigit + thirdDigit;
         int sumTheSecondThreeDigits = fourthDigit + fifthDigit + sixthDigit;
-        if (theFirstThreeDigits == theSecondThreeDigits || sumTheFirstThreeDigits == sumTheSecondThreeDigits){
+        if (theFirstThreeDigits == theSecondThreeDigits || sumTheFirstThreeDigits == sumTheSecondThreeDigits) {
             System.out.println("Билет с номером " + ticketNumber + " счастливый.");
         } else {
             System.out.println("Билет с номером " + ticketNumber + " несчастливый.");
         }
     }
-    public static void ex1(){
+
+    public static void ex1() {
         /*
          *  Напишите программу, которая складывает, вычитает, умножает, делит два целых числа.
          *  И выводит результат.
